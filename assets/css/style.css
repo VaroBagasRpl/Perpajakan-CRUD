@@ -1,0 +1,265 @@
+/* ========================================================
+   SISTEM INFORMASI PERPAJAKAN - CUSTOM STYLESHEET
+   Tema: Official Tax Authority Emerald & Gold (#1b4332 / #d4af37)
+   ======================================================== */
+
+:root {
+    --tax-primary: #1b4332;
+    --tax-primary-dark: #0f281e;
+    --tax-primary-light: #2d6a4f;
+    --tax-accent: #d4af37;
+    --tax-accent-hover: #b89628;
+    --tax-gold: #f59e0b;
+    --tax-bg: #f8fafc;
+    --tax-sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--tax-bg);
+    color: #334155;
+    min-height: 100vh;
+}
+
+/* Background utilities */
+.bg-tax-primary {
+    background-color: var(--tax-primary) !important;
+}
+
+.bg-tax-primary-dark {
+    background-color: var(--tax-primary-dark) !important;
+}
+
+.bg-tax-accent {
+    background-color: var(--tax-accent) !important;
+}
+
+.text-tax-primary {
+    color: var(--tax-primary) !important;
+}
+
+.text-tax-accent {
+    color: var(--tax-accent) !important;
+}
+
+.border-tax-primary {
+    border-color: var(--tax-primary) !important;
+}
+
+/* Custom Buttons */
+.btn-tax-primary {
+    background-color: var(--tax-primary);
+    border-color: var(--tax-primary);
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-tax-primary:hover, .btn-tax-primary:focus {
+    background-color: var(--tax-primary-light);
+    border-color: var(--tax-primary-light);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
+}
+
+.btn-tax-accent {
+    background-color: var(--tax-accent);
+    border-color: var(--tax-accent);
+    color: #0f281e;
+    font-weight: 600;
+}
+
+.btn-tax-accent:hover {
+    background-color: var(--tax-accent-hover);
+    border-color: var(--tax-accent-hover);
+    color: #0f281e;
+}
+
+/* Hero Section */
+.hero-tax {
+    background: linear-gradient(135deg, #1b4332 0%, #0f281e 60%, #163628 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-tax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Navbar */
+.navbar-tax {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand-tax {
+    font-weight: 800;
+    color: var(--tax-primary) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.5px;
+}
+
+/* Table Design matching PDF */
+.table-tax {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-tax thead th {
+    background-color: var(--tax-primary);
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    padding: 12px 16px;
+    border: none;
+}
+
+.table-tax tbody td {
+    padding: 12px 16px;
+    vertical-align: middle;
+    border-top: 1px solid #f1f5f9;
+}
+
+.table-tax tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Cards & Stats */
+.card-stat {
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+}
+
+.card-stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Sidebar Dashboard */
+.sidebar-wrapper {
+    width: var(--tax-sidebar-width);
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    min-height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-heading {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #94a3b8;
+    padding: 16px 20px 8px;
+}
+
+.sidebar-nav .nav-link {
+    color: #475569;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 3px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: var(--tax-primary);
+    background-color: #f1f5f9;
+    border-left-color: var(--tax-primary-light);
+}
+
+.sidebar-nav .nav-link.active {
+    color: var(--tax-primary);
+    font-weight: 700;
+    background-color: #e8f5e9;
+    border-left-color: var(--tax-primary);
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 1.15rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Layout container */
+.admin-layout {
+    display: flex;
+    min-height: calc(100vh - 65px);
+}
+
+.main-content {
+    flex: 1;
+    padding: 24px;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Breadcrumb & Page Titles */
+.page-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+/* Badge styling */
+.badge-table-tag {
+    font-family: monospace;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    background: #e2e8f0;
+    color: #334155;
+    border-radius: 4px;
+}
+
+/* Custom form control focus */
+.form-control:focus, .form-select:focus {
+    border-color: var(--tax-primary-light);
+    box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.2);
+}
+
+/* Responsive adjustment */
+@media (max-width: 991.98px) {
+    .sidebar-wrapper {
+        position: fixed;
+        top: 65px;
+        left: -260px;
+        bottom: 0;
+        z-index: 1050;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    .sidebar-wrapper.show {
+        left: 0;
+    }
+}
+
